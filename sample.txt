@@ -1,0 +1,24 @@
+                            <tr>
+                                <!-- 投稿タイトル -->
+                                <td class="table-text">
+                                    <div>名前：{{ $hatsuwa->item_name }}</div>
+                                </td>
+                                <td class="table-text">
+                                    <div>タイトル：{{ $hatsuwa->item_title }}</div>
+                                </td>
+                                <td class="table-text">
+                                
+                                    @foreach ($hatsuwa->tags as $tag )
+                                    <div>#{{ $tag->name }} </div>
+                                    @endforeach
+                                </td>
+                                <td class="table-text">
+                                    <div id="waveform" style="width: 500px;"> 
+                                    <audio controls src="upload/{{ $hatsuwa->item_music }}"></audio>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            
+                            
+-----------------------------------------------------------
